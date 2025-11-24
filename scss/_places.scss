@@ -1,0 +1,83 @@
+@import '_mixin.scss';
+@import '_peremen.scss';
+
+.places {
+    width: $width-1400;
+    margin: 0 auto;
+    padding: 80px 0;
+
+    &__container {
+        @include dflex-dcolumn();
+        @include dflex-alcenter();
+    }
+
+    &__text {
+        @include dflex-dcolumn();
+        width: 763px;
+    }
+
+    &__title {
+        @include txt-40-black();
+        width: 763px;
+        line-height: 120%;
+        text-align: center;
+        align-self: center;
+        margin: 0;
+        margin-bottom: 24px;
+        letter-spacing: 1.9px;
+    }
+
+    &__subtitle {
+        @include txt-18-black();
+        width: 460px;
+        text-align: center;
+        align-self: center;
+        margin: 0;
+        margin-bottom: 40px;
+    }
+
+    &__cards {
+        @include dflex-jcbetween();
+        width: 1338px;
+    }
+}
+
+.card {
+    width: 430px;
+    border-radius: $radius-16;
+    position: relative;
+
+    &__info {
+        position: absolute;
+        bottom: 40px;
+        left: 32px;
+        color: $white;
+        z-index: 2;
+    }
+
+    &__city {
+        @include txt-28-white-350();
+        margin: 0;
+        margin-bottom: -3px;
+    }
+
+    &__country {
+        @include txt-18-350();
+        margin: 0;
+        margin-bottom: 3px;
+    }
+
+    &__arrow-left {
+        position: absolute;
+        z-index: 2;
+        bottom: 183px;
+        left: -16px;
+    }
+
+    &__arrow-right {
+        position: absolute;
+        z-index: 2;
+        bottom: 183px;
+        left: 414px;
+    }
+}

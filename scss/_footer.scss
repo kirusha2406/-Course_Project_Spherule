@@ -1,0 +1,133 @@
+@import '_mixin.scss';
+@import '_peremen.scss';
+
+.footer {
+    display: flex;
+    margin-top: -1.5px;
+
+    &__block {
+        background-color: $black;
+        @include dflex-dcolumn();
+        gap: 48px;
+        padding: 48px 31px 24px 31px;
+        border-radius: $radius-16;
+        width: 1338px;
+    }
+
+    &__menu {
+        @include dflex-jcbetween();
+        width: 1338px;
+        align-items: start;
+    }
+
+    &__info {
+        width: 703px;
+        @include dflex-dcolumn();
+        align-items: start;
+        gap: 32px;
+    }
+
+    &__company {
+        @include dflex-dcolumn();
+        align-items: start;
+        gap: 16px;
+
+        &-text {
+            @include txt-16-white();
+            margin: 0;
+        }
+    }
+
+    &__nav-list {
+        @include dflex-alcenter();
+        width: 389px;
+        gap: 32px;
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    &__nav-item {
+        @include txt-16();
+        font-weight: 400;
+        letter-spacing: 0.06px;
+    }
+
+    &__nav-link {
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+            color: $grey;
+        }
+    }
+
+    &__register {
+        width: 440px;
+        @include dflex-dcolumn();
+        gap: 16px;
+        align-items: start;
+
+        &-text {
+            margin: 0;
+            @include txt-20-black();
+            color: $white;
+        }
+    }
+
+    &__buttons {
+        @include dflex-jcbetween();
+        width: 440px;
+    }
+
+    &__first-button {
+        width: 265px;
+        text-align: start;
+        border-radius: 50px;
+        padding: 10px 20px;
+        border: 1px #ffffff solid;
+        @include txt-16-white();
+        font-weight: 400;
+        background-color: $black;
+    }
+
+    &__second-button {
+        @include dflex-allcenter();
+        width: 118px;
+        border-radius: 50px;
+        padding: 12px 0px;
+        border: none;
+        @include txt-16();
+        font-weight: 600;
+        color: $black;
+        text-decoration: none;
+        background-color: $white;
+
+        &:hover {
+            background-color: $grey;
+        }
+    }
+
+    &__brand {
+        width: 1338px;
+        padding-top: 32px;
+        @include dflex-jcbetween();
+        border-top: 1px #4F4F53 solid;
+    }
+
+    &__rights {
+        @include txt-16-white();
+        margin: 0;
+    }
+
+    &__aspects {
+        width: 191px;
+        @include dflex-alcenter();
+        gap: 15px;
+        list-style: none;
+        @include txt-16-white();
+        margin: 0;
+        letter-spacing: 0.15px;
+    }
+}

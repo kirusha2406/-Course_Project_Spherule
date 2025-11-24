@@ -1,0 +1,266 @@
+@import '_mixin.scss';
+@import '_peremen.scss';
+
+@font-face {
+    font-family: 'DM_sans';
+    src: url("../fonts/DMSans-VariableFont_opsz\,wght.ttf");
+}
+
+.container {
+    width: $width-1400;
+    margin: 0 auto;
+}
+
+.hero {
+    margin-top: 20px;
+    width: $width-1400;
+    border-radius: $radius-16;
+    background-image:
+        linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
+        url('../img/1.png');
+    @include dflex-dcolumn-ccenter();
+    padding: 20px 0 0 0;
+
+    &__nav {
+        @include dflex-jcbetween-alcenter();
+        align-self: center;
+        width: 1216px;
+        padding: 7.5px 32px;
+    }
+
+    &__brand {
+        @include dflex-jcbetween-alcenter();
+        width: 111px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        margin-right: 40px;
+    }
+
+    &__nav-list {
+        @include dflex-alcenter();
+        width: 453px;
+        gap: 48px;
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+        font-family: $font-dm;
+        cursor: pointer;
+    }
+
+    &__nav-item {
+        @include txt-16();
+    }
+
+    &__nav-link {
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+            color: $black;
+        }
+    }
+
+    &__auth {
+        @include dflex-jcbetween-alcenter();
+        width: 196px;
+        gap: 12px;
+    }
+
+    &__login {
+        padding: 12px 20px;
+        @include txt-16-white();
+        cursor: pointer;
+    }
+
+    &__auth-button {
+        @include dflex-allcenter();
+        background-color: $black;
+        padding: 12px 20px;
+        border-radius: $radius-40;
+        width: 103px;
+        border: none;
+
+        &:hover {
+            background-color: $grey;
+        }
+    }
+
+    &__register {
+        @include txt-16-white-600();
+        text-decoration: none;
+    }
+}
+
+.Error {
+    @include dflex-jccenter();
+    @include dflex-alcenter();
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin: 500px 0;
+    }
+
+    &__text {
+        font-family: $font-dm;
+        color: $grey;
+        font-size: 100px;
+        font-weight: 600;
+        margin: 0;
+        text-align: center;
+    }
+
+    &__back {
+        font-family: $font-dm;
+        color: $grey;
+        font-size: 60px;
+        font-weight: 600;
+    }
+
+    &__link {
+        font-family: $font-dm;
+        text-decoration: none;
+        color: $grey;
+
+        &:visited {
+            font-family: $font-dm;
+            text-decoration: none;
+            color: $grey;
+        }
+
+        &:active {
+            font-family: $font-dm;
+            text-decoration: none;
+            color: $grey;
+        }
+    }
+}
+
+.footer {
+    display: flex;
+
+    &__block {
+        background-color: $black;
+        @include dflex-dcolumn();
+        gap: 48px;
+        padding: 48px 31px 24px 31px;
+        border-radius: $radius-16;
+        width: 1338px;
+    }
+
+    &__menu {
+        @include dflex-jcbetween();
+        width: 1338px;
+        align-items: start;
+    }
+
+    &__info {
+        width: 703px;
+        @include dflex-dcolumn();
+        align-items: start;
+        gap: 32px;
+    }
+
+    &__company {
+        @include dflex-dcolumn();
+        align-items: start;
+        gap: 16px;
+
+        &-text {
+            @include txt-16-white();
+            margin: 0;
+        }
+    }
+
+    &__nav-list {
+        @include dflex-alcenter();
+        width: 389px;
+        gap: 32px;
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    &__nav-item {
+        @include txt-16();
+        font-weight: 400;
+        letter-spacing: 0.06px;
+    }
+
+    &__nav-link {
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+            color: $grey;
+        }
+    }
+
+    &__register {
+        width: 440px;
+        @include dflex-dcolumn();
+        gap: 16px;
+        align-items: start;
+
+        &-text {
+            margin: 0;
+            @include txt-20-black();
+            color: $white;
+        }
+    }
+
+    &__buttons {
+        @include dflex-jcbetween();
+        width: 440px;
+    }
+
+    &__first-button {
+        width: 265px;
+        text-align: start;
+        border-radius: 50px;
+        padding: 10px 20px;
+        border: 1px #ffffff solid;
+        @include txt-16-white();
+        font-weight: 400;
+        background-color: $black;
+    }
+
+    &__second-button {
+        width: 118px;
+        border-radius: 50px;
+        padding: 12px 20px;
+        border: none;
+        @include txt-16();
+        font-weight: 600;
+        color: $black;
+        background-color: $white;
+
+        &:hover {
+            background-color: $grey;
+        }
+    }
+
+    &__brand {
+        width: 1338px;
+        padding-top: 32px;
+        @include dflex-jcbetween();
+        border-top: 1px #4F4F53 solid;
+    }
+
+    &__rights {
+        @include txt-16-white();
+        margin: 0;
+    }
+
+    &__aspects {
+        width: 191px;
+        @include dflex-alcenter();
+        gap: 15px;
+        list-style: none;
+        @include txt-16-white();
+        margin: 0;
+        letter-spacing: 0.15px;
+    }
+}

@@ -1,0 +1,146 @@
+@import '_mixin.scss';
+@import '_peremen.scss';
+
+.hero {
+    margin-top: 20px;
+    width: $width-1400;
+    border-radius: $radius-16;
+    background-image:
+        linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
+        url(../img/1.png);
+    @include dflex-dcolumn-ccenter();
+    padding: 20px 0 0 0;
+
+    &__nav {
+        @include dflex-jcbetween-alcenter();
+        align-self: center;
+        width: 1216px;
+        margin-bottom: 140px;
+        padding: 7.5px 32px;
+    }
+
+    &__burger {
+        display: none;
+    }
+
+    &__brand {
+        @include dflex-jcbetween-alcenter();
+        width: 111px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        margin-right: 40px;
+    }
+
+    &__nav-list {
+        @include dflex-alcenter();
+        width: 453px;
+        gap: 48px;
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+        font-family: $font-dm;
+        cursor: pointer;
+    }
+
+    &__nav-item {
+        @include txt-16();
+    }
+
+    &__nav-link {
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+            color: $black;
+        }
+    }
+
+    &__auth {
+        @include dflex-jcbetween-alcenter();
+        width: 196px;
+        gap: 12px;
+    }
+
+    &__login {
+        padding: 12px 20px;
+        @include txt-16-white();
+        cursor: pointer;
+    }
+
+    &__register {
+        @include txt-16-white-600();
+        text-decoration: none;
+        @include dflex-allcenter();
+        background-color: $black;
+        padding: 12px 20px;
+        border-radius: $radius-40;
+        width: 103px;
+        border: none;
+
+        &:hover {
+            background-color: $grey;
+        }
+    }
+
+    &__center {
+        @include dflex-dcolumn();
+        align-self: center;
+        width: 608px;
+        margin-bottom: 140px;
+        text-align: center;
+    }
+
+    &__title {
+        @include txt-66-white();
+        align-self: center;
+        max-width: 592px;
+        margin-top: 0;
+        margin-bottom: 24px;
+    }
+
+    &__subtitle {
+        @include txt-16-white();
+        width: 608px;
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+
+    &__button-link {
+        @include dflex-allcenter();
+        align-self: center;
+        background-color: $black;
+        padding: 12px 0px;
+        border-radius: $radius-40;
+        width: 134px;
+        border: none;
+        @include txt-16-white-600();
+        text-decoration: none;
+
+        &:hover {
+            background-color: $grey;
+        }
+    }
+
+    &__stats {
+        @include dflex-jcbetween();
+        padding: 0 80px;
+        margin-bottom: 40px;
+        width: 1240px;
+    }
+
+    &__stat {
+        @include dflex-allcenter();
+        @include dflex-dcolumn();
+        color: $white;
+        text-align: center;
+
+        &-amount {
+            @include txt-28-white-350();
+            margin-bottom: 3px;
+        }
+
+        &-desc {
+            @include txt-18();
+        }
+    }
+}

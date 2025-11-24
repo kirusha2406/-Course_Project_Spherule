@@ -1,0 +1,65 @@
+@import '_mixin.scss';
+@import '_peremen.scss';
+
+.review {
+    @include dflex-dcolumn();
+    @include dflex-alcenter();
+    gap: 40px;
+    overflow: hidden;
+
+    &__title {
+        width: 720px;
+        @include txt-40-black();
+        font-weight: 500;
+        text-align: center;
+        line-height: 1.20;
+        margin: 0;
+        margin-top: 80px;
+        letter-spacing: 1.85px;
+    }
+
+    &__cards {
+        @include dflex-jcbetween();
+        margin-bottom: 80px;
+        width: 1533px;
+    }
+
+    &__card {
+        @include dflex-dcolumn();
+        width: 431px;
+        gap: 29px;
+        border: 1px #E5E5E5 solid;
+        border-radius: $radius-16;
+        padding: 31px 30px;
+    }
+
+    &__quote {
+        @include txt-28-black();
+        text-align: start;
+        margin: 1px 0 0 0;
+        line-height: 1.29;
+    }
+
+    &__author {
+        @include dflex-dcolumn();
+        margin: 0;
+        align-items: start;
+        gap: 8px;
+
+        &-info {
+            @include dflex-dcolumn();
+            gap: 4px;
+            align-items: start;
+        }
+
+        &-name {
+            @include txt-20-black();
+            margin: 0;
+        }
+
+        &-work {
+            @include txt-16-muted();
+            margin: 0;
+        }
+    }
+}

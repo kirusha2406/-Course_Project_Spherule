@@ -1,0 +1,2796 @@
+@import '_mixin.scss';
+@import '_peremen.scss';
+@import '_header.scss';
+@import '_info.scss';
+@import '_places.scss';
+@import '_hotels.scss';
+@import '_ready.scss';
+@import '_review.scss';
+@import '_footer.scss';
+
+
+
+@font-face {
+    font-family: 'DM_sans';
+    src: url("../fonts/DMSans-VariableFont_opsz\,wght.ttf");
+}
+
+body {
+    background-color: $white;
+}
+
+.container {
+    width: $width-1400;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+    .container {
+        width: 1150px;
+        margin: 0 auto;
+    }
+
+    .hero {
+        width: 1150px;
+        display: flex;
+        align-items: center;
+
+        &__nav {
+            width: 1050px;
+        }
+
+        &__stats {
+            width: 1050px;
+        }
+    }
+
+    .places {
+        width: 1150px;
+        margin: 0 auto;
+        padding: 80px 0;
+
+        &__cards {
+            @include dflex-jcbetween();
+            width: 1140px;
+        }
+    }
+
+    .card {
+        width: 350px;
+
+        &__img {
+            width: 350px;
+        }
+
+        &__arrow-left {
+            bottom: 150px;
+            left: -16px;
+        }
+
+        &__arrow-right {
+            bottom: 150px;
+            left: 334px;
+        }
+    }
+
+    .info {
+        @include dflex-alcenter();
+
+        &__content {
+            width: 1150px;
+            @include dflex-jcbetween-alcenter();
+            margin: 80px 0px;
+        }
+
+        &__img {
+            width: 500px;
+            margin-bottom: 8px;
+        }
+    }
+
+    .hotels {
+        &__cards {
+            @include dflex-jcbetween();
+            width: 1150px;
+        }
+
+        &__first-card {
+            width: 350px;
+            @include dflex-jccenter();
+            background-image: url('/img/отель\ 1.png');
+            background-size: 350px;
+        }
+
+        &__second-card {
+            width: 350px;
+            @include dflex-jccenter();
+            background-image: url('/img/отель\ 2.png');
+            background-size: 350px;
+        }
+
+        &__third-card {
+            width: 350px;
+            @include dflex-jccenter();
+            background-image: url('/img/отель\ 3.png');
+            background-size: 350px;
+        }
+
+        &__card-info {
+            margin-top: 225px;
+            width: 320px;
+            padding: 5px;
+            gap: 14px;
+            margin-bottom: 8px;
+        }
+
+        &__card-price {
+            width: 60px;
+        }
+    }
+
+    .review {
+        @include dflex-dcolumn();
+        @include dflex-alcenter();
+        gap: 40px;
+        overflow: hidden;
+
+        &__title {
+            width: 720px;
+            @include txt-40-black();
+            font-weight: 500;
+            text-align: center;
+            line-height: 1.20;
+            margin: 0;
+            margin-top: 80px;
+            letter-spacing: 1.85px;
+        }
+
+        &__cards {
+            @include dflex-jcbetween();
+            margin-bottom: 80px;
+            width: 1533px;
+        }
+
+        &__card {
+            @include dflex-dcolumn();
+            width: 431px;
+            gap: 29px;
+            border: 1px #E5E5E5 solid;
+            border-radius: $radius-16;
+            padding: 31px 30px;
+        }
+
+        &__quote {
+            @include txt-28-black();
+            text-align: start;
+            margin: 1px 0 0 0;
+            line-height: 1.29;
+        }
+
+        &__author {
+            @include dflex-dcolumn();
+            margin: 0;
+            align-items: start;
+            gap: 8px;
+
+            &-info {
+                @include dflex-dcolumn();
+                gap: 4px;
+                align-items: start;
+            }
+
+            &-name {
+                @include txt-20-black();
+                margin: 0;
+            }
+
+            &-work {
+                @include txt-16-muted();
+                margin: 0;
+            }
+        }
+    }
+
+    .ready {
+        @include dflex-jccenter();
+
+        &__block {
+            width: 1088px;
+            padding: 64px;
+        }
+
+        &__text {
+            @include dflex-dcolumn();
+            gap: 16px;
+            width: 548px;
+        }
+
+        &__buttons {
+            width: 342px;
+            @include dflex-jcbetween();
+        }
+    }
+
+    .footer {
+        display: flex;
+
+        &__block {
+            width: 1088px;
+        }
+
+        &__menu {
+            @include dflex-jcbetween();
+            width: 1088px;
+            align-items: start;
+        }
+
+        &__info {
+            width: 603px;
+            @include dflex-dcolumn();
+            align-items: start;
+            gap: 32px;
+        }
+
+        &__brand {
+            width: 1088px;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .container {
+        width: 950px;
+        margin: 0 auto;
+    }
+
+    .hero {
+        width: 950px;
+        display: flex;
+        align-items: center;
+
+        &__nav {
+            width: 900px;
+            padding: 7.5px 25px;
+        }
+
+        &__stats {
+            width: 900px;
+            padding: 0 25px;
+        }
+    }
+
+    .places {
+        width: 950px;
+        margin: 0 auto;
+        padding: 80px 0;
+
+        &__cards {
+            @include dflex-jcbetween();
+            width: 950px;
+        }
+    }
+
+    .card {
+        width: 300px;
+
+        &__img {
+            width: 300px;
+        }
+
+        &__arrow-left {
+            bottom: 100px;
+            left: -16px;
+        }
+
+        &__arrow-right {
+            bottom: 100px;
+            left: 282px;
+        }
+    }
+
+    .info {
+        @include dflex-alcenter();
+
+        &__content {
+            width: 950px;
+            @include dflex-jcbetween-alcenter();
+            margin: 80px 0px;
+        }
+
+        &__img {
+            width: 350px;
+            margin-bottom: 8px;
+        }
+    }
+
+    .hotels {
+        &__cards {
+            @include dflex-jcbetween();
+            width: 950px;
+        }
+
+        &__first-card {
+            width: 300px;
+            @include dflex-jccenter();
+            background-image: url('/img/отель\ 1.png');
+            background-size: 300px;
+        }
+
+        &__second-card {
+            width: 300px;
+            @include dflex-jccenter();
+            background-image: url('/img/отель\ 2.png');
+            background-size: 300px;
+        }
+
+        &__third-card {
+            width: 300px;
+            @include dflex-jccenter();
+            background-image: url('/img/отель\ 3.png');
+            background-size: 300px;
+        }
+
+        &__card-info {
+            margin-top: 176px;
+            width: 220px;
+            padding: 5px;
+            gap: 14px;
+            margin-bottom: 8px;
+        }
+
+        &__card-price {
+            width: 50px;
+        }
+    }
+
+    .review {
+        @include dflex-dcolumn();
+        @include dflex-alcenter();
+        gap: 40px;
+        overflow: hidden;
+
+        &__title {
+            font-family: $font-dm;
+            width: 500px;
+            font-size: 36px;
+            color: $black;
+            font-weight: 500;
+            text-align: center;
+            line-height: 1;
+            margin: 0;
+            margin-top: 50px;
+            letter-spacing: 1px;
+        }
+
+        &__cards {
+            @include dflex-jcbetween();
+            margin-bottom: 80px;
+            width: 950px;
+        }
+
+        &__card {
+            @include dflex-dcolumn();
+            width: 250px;
+            gap: 18px;
+            border: 1px #E5E5E5 solid;
+            border-radius: $radius-16;
+            padding: 20px 20px;
+        }
+
+        &__quote {
+            font-family: $font-dm;
+            font-size: 20px;
+            letter-spacing: 1.3;
+            color: $black;
+            text-align: start;
+            margin: 1px 0 0 0;
+            line-height: 1.29;
+        }
+
+        &__author {
+            @include dflex-dcolumn();
+            margin: 0;
+            align-items: start;
+            gap: 8px;
+
+            &-info {
+                @include dflex-dcolumn();
+                gap: 4px;
+                align-items: start;
+            }
+
+            &-name {
+                @include txt-20-black();
+                margin: 0;
+            }
+
+            &-work {
+                @include txt-16-muted();
+                margin: 0;
+            }
+        }
+    }
+
+    .ready {
+        @include dflex-jccenter();
+
+        &__block {
+            width: 890px;
+            padding: 30px;
+        }
+
+        &__text {
+            @include dflex-dcolumn();
+            gap: 16px;
+            width: 548px;
+        }
+
+        &__buttons {
+            width: 342px;
+            @include dflex-jcbetween();
+        }
+    }
+
+    .footer {
+        display: flex;
+
+        &__block {
+            width: 900px;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        &__menu {
+            @include dflex-jcbetween();
+            width: 900px;
+            align-items: start;
+        }
+
+        &__info {
+            width: 400px;
+            @include dflex-dcolumn();
+            align-items: start;
+            gap: 32px;
+        }
+
+        &__brand {
+            width: 900px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .container {
+        width: 750px;
+        margin: 0 auto;
+    }
+
+    .hero {
+        margin-top: 10px;
+        width: 750px;
+        border-radius: $radius-16;
+        background-image:
+            linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
+            url('/img/1.png');
+        @include dflex-dcolumn-ccenter();
+        padding: 10px 0 0 0;
+
+        &__nav {
+            @include dflex-jcbetween-alcenter();
+            align-self: center;
+            width: 700px;
+            margin-bottom: 100px;
+            padding: 7.5px 25px;
+        }
+
+        &__brand {
+            @include dflex-jcbetween-alcenter();
+            width: 120px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            margin-right: 10px;
+        }
+
+        &__nav-list {
+            @include dflex-alcenter();
+            width: 320px;
+            gap: 20px;
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+            font-family: $font-dm;
+            cursor: pointer;
+        }
+
+        &__nav-item {
+            font-family: $font-dm;
+            font-size: 14px;
+        }
+
+        &__nav-link {
+            color: $white;
+            text-decoration: none;
+
+            &:hover {
+                color: $black;
+            }
+        }
+
+        &__auth {
+            @include dflex-jcbetween-alcenter();
+            width: 196px;
+            gap: 10px;
+        }
+
+        &__login {
+            padding: 12px 20px;
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $white;
+            cursor: pointer;
+        }
+
+        &__register {
+            @include dflex-allcenter();
+            background-color: $black;
+            padding: 12px 0px;
+            border-radius: $radius-40;
+            width: 103px;
+            border: none;
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $white;
+            font-weight: 600;
+            text-decoration: none;
+
+            &:hover {
+                background-color: $grey;
+            }
+        }
+
+        &__center {
+            @include dflex-dcolumn();
+            align-self: center;
+            width: 500px;
+            margin-bottom: 100px;
+            text-align: center;
+        }
+
+        &__title {
+            font-family: $font-dm;
+            font-size: 50px;
+            color: $white;
+            align-self: center;
+            max-width: 500px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        &__subtitle {
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $white;
+            width: 500px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        &__button-link {
+            @include dflex-allcenter();
+            align-self: center;
+            background-color: $black;
+            padding: 12px 0px;
+            border-radius: $radius-40;
+            width: 134px;
+            border: none;
+            @include txt-16-white-600();
+            text-decoration: none;
+
+            &:hover {
+                background-color: $grey;
+            }
+        }
+
+        &__stats {
+            @include dflex-jcbetween();
+            padding: 0 25px;
+            margin-bottom: 20px;
+            width: 700px;
+        }
+
+        &__stat {
+            @include dflex-allcenter();
+            @include dflex-dcolumn();
+            color: $white;
+            text-align: center;
+
+            &-amount {
+                font-family: $font-dm;
+                font-size: 20px;
+                color: $white;
+                font-weight: 350;
+                margin-bottom: 3px;
+            }
+
+            &-desc {
+                font-family: $font-dm;
+                font-size: 16px;
+                color: $white;
+            }
+        }
+    }
+
+    .places {
+        width: 750px;
+        margin: 0 auto;
+        padding: 40px 0;
+
+        &__container {
+            @include dflex-dcolumn();
+            @include dflex-alcenter();
+        }
+
+        &__text {
+            @include dflex-dcolumn();
+            width: 600px;
+        }
+
+        &__title {
+            font-family: $font-dm;
+            font-size: 24px;
+            color: $black;
+            font-weight: 500;
+            width: 500px;
+            line-height: 1;
+            text-align: center;
+            align-self: center;
+            margin: 0;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        &__subtitle {
+            font-family: $font-dm;
+            font-size: 18px;
+            color: $black;
+            font-weight: 400;
+            width: 380px;
+            text-align: center;
+            align-self: center;
+            margin: 0;
+            margin-bottom: 30px;
+        }
+
+        &__cards {
+            @include dflex-jcbetween();
+            width: 730px;
+        }
+    }
+
+    .card {
+        width: 240px;
+        border-radius: $radius-16;
+        position: relative;
+
+        &__info {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            color: $white;
+            z-index: 2;
+        }
+
+        &__img {
+            width: 240px;
+        }
+
+        &__city {
+            @include txt-28-white-350();
+            margin: 0;
+            margin-bottom: -3px;
+        }
+
+        &__country {
+            @include txt-18-350();
+            margin: 0;
+            margin-bottom: 3px;
+        }
+
+        &__arrow-left {
+            position: absolute;
+            z-index: 2;
+            bottom: 84px;
+            left: -6px;
+        }
+
+        &__arrow-right {
+            position: absolute;
+            z-index: 2;
+            bottom: 84px;
+            left: 214px;
+        }
+    }
+
+    .info {
+        @include dflex-alcenter();
+
+        &__content {
+            width: 750px;
+            @include dflex-jcbetween-alcenter();
+            margin: 40px 11px;
+        }
+
+        &__info {
+            @include dflex-dcolumn();
+            justify-content: start;
+            margin: 0;
+            width: 420px;
+            gap: 20px;
+        }
+
+        &__about {
+            @include dflex-dcolumn();
+            width: 420px;
+            gap: 10px;
+        }
+
+        &__title {
+            font-family: $font-dm;
+            font-size: 24px;
+            color: $black;
+            font-weight: 500;
+            line-height: 1;
+            margin: 0;
+            letter-spacing: 0;
+            margin-top: 0px;
+            margin-left: 0px;
+        }
+
+        &__subtitle {
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $muted;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        &__benefits {
+            width: 400px;
+            @include dflex-dcolumn();
+            gap: 20px;
+        }
+
+        &__benefit {
+            @include dflex-jcbetween-alcenter();
+            width: 400px;
+
+            &-text {
+                width: 320px;
+                @include dflex-dcolumn();
+                gap: 8px;
+                margin-top: 1px;
+            }
+
+            &-title {
+                @include txt-24-black();
+                margin: 0;
+            }
+
+            &-subtitle {
+                font-family: $font-dm;
+                font-size: 14px;
+                color: $muted;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+
+        &__button-link {
+            width: 157px;
+            border-radius: $radius-40;
+            padding: 12px 0px;
+            background-color: $black;
+            color: $white;
+            @include txt-16-white();
+            font-weight: 500;
+            border: none;
+            letter-spacing: 0.2px;
+
+            &:hover {
+                background-color: $grey;
+            }
+        }
+
+        &__img {
+            width: 308px;
+            margin-bottom: 8px;
+        }
+    }
+
+    .hotels {
+        @include dflex-dcolumn();
+        @include dflex-alcenter();
+        gap: 20px;
+
+        &__info {
+            margin-top: 40px;
+            width: 500px;
+            @include dflex-dcolumn();
+            gap: 12px;
+        }
+
+        &__title {
+            font-family: $font-dm;
+            font-size: 24px;
+            color: $black;
+            font-weight: 500;
+            line-height: 1;
+            margin: 0;
+            margin-left: 0px;
+            letter-spacing: 0;
+        }
+
+        &__subtitle {
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $muted;
+            font-weight: 400;
+            margin: 0;
+            text-align: center;
+        }
+
+        &__cards {
+            @include dflex-jcbetween();
+            width: 750px;
+        }
+
+        &__first-card {
+            width: 240px;
+            @include dflex-jccenter();
+            background-image: url('/img/отель\ 1.png');
+            background-size: 240px;
+        }
+
+        &__second-card {
+            width: 240px;
+            @include dflex-jccenter();
+            background-image: url('/img/отель\ 2.png');
+            background-size: 240px;
+        }
+
+        &__third-card {
+            width: 240px;
+            @include dflex-jccenter();
+            background-image: url('/img/отель\ 3.png');
+            background-size: 240px;
+        }
+
+        &__card-info {
+            margin-top: 122px;
+            width: 200px;
+            padding: 10px;
+            border-radius: $radius-16;
+            background-color: $white;
+            @include dflex-dcolumn();
+            gap: 10px;
+            margin-bottom: 6px;
+        }
+
+        &__card-text {
+            @include dflex-dcolumn();
+            gap: 4px;
+        }
+
+        &__card-title {
+            font-family: $font-dm;
+            font-size: 16px;
+            color: $black;
+            font-weight: 400;
+            color: $black;
+            margin: 0;
+        }
+
+        &__card-subtitle {
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $muted;
+            margin: 0;
+        }
+
+        &__card-options {
+            @include dflex-jcbetween();
+        }
+
+        &__card-price {
+            width: 70px;
+        }
+
+        &__card-dollars {
+            font-family: $font-dm;
+            font-size: 18px;
+            color: $black;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        &__card-night {
+            font-family: $font-dm;
+            font-size: 16px;
+            color: $muted;
+            font-weight: 400;
+        }
+
+        &__card-rating {
+            width: 54px;
+            @include dflex-allcenter();
+            background-color: $accent;
+            border-radius: $radius-48;
+        }
+
+        &__card-stars {
+            margin: 0;
+        }
+
+        &__button-link {
+            width: 142px;
+            padding: 12px 0px;
+            border-radius: $radius-40;
+            background-color: $black;
+            font-family: $font-dm;
+            font-size: 16px;
+            color: $white;
+            font-weight: 600;
+            border: none;
+            margin-bottom: 80px;
+
+            &:hover {
+                background-color: $grey;
+            }
+        }
+    }
+
+    .review {
+        @include dflex-dcolumn();
+        @include dflex-alcenter();
+        gap: 20px;
+        overflow: hidden;
+
+        &__title {
+            width: 500px;
+            font-family: $font-dm;
+            font-size: 24px;
+            color: $black;
+            font-weight: 500;
+            text-align: center;
+            line-height: 1;
+            margin: 0;
+            margin-top: 40px;
+            letter-spacing: 0px;
+        }
+
+        &__cards {
+            @include dflex-jcbetween();
+            margin-bottom: 40px;
+            width: 800px;
+        }
+
+        &__card {
+            @include dflex-dcolumn();
+            width: 230px;
+            gap: 25px;
+            border: 1px #E5E5E5 solid;
+            border-radius: $radius-16;
+            padding: 10px 10px;
+        }
+
+        &__quote {
+            font-family: $font-dm;
+            font-size: 20px;
+            color: $black;
+            font-weight: 400;
+            text-align: start;
+            margin: 0px 0 0 0;
+            line-height: 1.2;
+        }
+
+        &__author {
+            @include dflex-dcolumn();
+            margin: 0;
+            align-items: start;
+            gap: 8px;
+
+            &-info {
+                @include dflex-dcolumn();
+                gap: 4px;
+                align-items: start;
+            }
+
+            &-name {
+                font-family: $font-dm;
+                font-size: 18px;
+                color: $black;
+                font-weight: 400;
+                margin: 0;
+            }
+
+            &-work {
+                font-family: $font-dm;
+                font-size: 14px;
+                color: $muted;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+    }
+
+    .ready {
+        @include dflex-jccenter();
+
+        &__block {
+            background-color: #F5F5F5;
+            border-radius: 16px;
+            width: 650px;
+            padding: 20px;
+            border: none;
+            @include dflex-jcbetween();
+            align-items: start;
+            margin-bottom: 40px;
+        }
+
+        &__text {
+            @include dflex-dcolumn();
+            gap: 12px;
+            width: 300px;
+        }
+
+        &__title {
+            font-family: $font-dm;
+            font-size: 20px;
+            color: $black;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        &__info {
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $muted;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        &__buttons {
+            width: 280px;
+            @include dflex-jcbetween();
+        }
+
+        &__first-button {
+            padding: 8px 20px;
+            border: 1px #4F4F53 solid;
+            border-radius: $radius-40;
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $muted;
+            font-weight: 500;
+            text-decoration: none;
+
+            &:hover {
+                background-color: $grey;
+            }
+        }
+
+        &__second-button {
+            padding: 8px 0px;
+            width: 160px;
+            border: none;
+            border-radius: $radius-40;
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $white;
+            font-weight: 500;
+            background-color: $black;
+
+            &:hover {
+                background-color: $grey;
+            }
+        }
+    }
+
+    .footer {
+        display: flex;
+        margin-top: 0px;
+
+        &__block {
+            background-color: $black;
+            @include dflex-dcolumn();
+            gap: 20px;
+            padding: 20px 16px 14px 16px;
+            border-radius: $radius-16;
+            width: 718px;
+        }
+
+        &__menu {
+            @include dflex-jcbetween();
+            width: 718px;
+            align-items: start;
+        }
+
+        &__info {
+            width: 280px;
+            @include dflex-dcolumn();
+            align-items: start;
+            gap: 16px;
+        }
+
+        &__company {
+            @include dflex-dcolumn();
+            align-items: start;
+            gap: 8px;
+
+            &-text {
+                font-family: $font-dm;
+                font-size: 16px;
+                color: $white;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+
+        &__nav-list {
+            @include dflex-alcenter();
+            width: 380px;
+            gap: 14px;
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        &__nav-item {
+            @include txt-16();
+            font-weight: 400;
+            letter-spacing: 0.06px;
+        }
+
+        &__nav-link {
+            color: $white;
+            text-decoration: none;
+
+            &:hover {
+                color: $grey;
+            }
+        }
+
+        &__register {
+            width: 440px;
+            @include dflex-dcolumn();
+            gap: 16px;
+            align-items: start;
+
+            &-text {
+                margin: 0;
+                @include txt-20-black();
+                color: $white;
+            }
+        }
+
+        &__buttons {
+            @include dflex-jcbetween();
+            width: 440px;
+        }
+
+        &__first-button {
+            width: 265px;
+            text-align: start;
+            border-radius: 50px;
+            padding: 10px 20px;
+            border: 1px #ffffff solid;
+            @include txt-16-white();
+            font-weight: 400;
+            background-color: $black;
+        }
+
+        &__second-button {
+            width: 118px;
+            border-radius: 50px;
+            padding: 12px 0px;
+            border: none;
+            @include txt-16();
+            font-weight: 600;
+            color: $black;
+            background-color: $white;
+
+            &:hover {
+                background-color: $grey;
+            }
+        }
+
+        &__brand {
+            width: 718px;
+            padding-top: 22px;
+            @include dflex-jcbetween();
+            border-top: 1px #4F4F53 solid;
+        }
+
+        &__rights {
+            @include txt-16-white();
+            margin: 0;
+        }
+
+        &__aspects {
+            width: 191px;
+            @include dflex-alcenter();
+            gap: 10px;
+            list-style: none;
+            @include txt-16-white();
+            margin: 0;
+            letter-spacing: 0px;
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .container {
+        width: 550px;
+        margin: 0 auto;
+    }
+
+    .hero {
+        margin-top: 10px;
+        width: 550px;
+        border-radius: $radius-16;
+        background-image:
+            linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
+            url('/img/1.png');
+        @include dflex-dcolumn-ccenter();
+        padding: 10px 0 0 0;
+
+        &__nav {
+            @include dflex-jcbetween-alcenter();
+            align-self: center;
+            width: 510px;
+            margin-bottom: 60px;
+            padding: 7.5px 20px;
+        }
+
+        &__brand {
+            @include dflex-jcbetween-alcenter();
+            width: 110px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            margin-right: 0px;
+        }
+
+        &__burger {
+            display: flex;
+
+            &-img {
+                width: 24px;
+            }
+        }
+
+        &__nav-list {
+            display: none;
+        }
+
+        &__nav-item {
+            display: none;
+        }
+
+        &__nav-link {
+            color: $white;
+            text-decoration: none;
+
+            &:hover {
+                color: $black;
+            }
+        }
+
+        &__auth {
+            display: none;
+        }
+
+        &__login {
+            display: none;
+        }
+
+        &__auth-button {
+            display: none;
+
+            &:hover {
+                background-color: $grey;
+            }
+        }
+
+        &__register {
+            display: none;
+        }
+
+        &__center {
+            @include dflex-dcolumn();
+            align-self: center;
+            width: 500px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        &__title {
+            font-family: $font-dm;
+            font-size: 30px;
+            color: $white;
+            align-self: center;
+            max-width: 500px;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        &__subtitle {
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $white;
+            width: 500px;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        &__button-link {
+            @include dflex-allcenter();
+            align-self: center;
+            background-color: $black;
+            padding: 10px 0px;
+            border-radius: $radius-40;
+            width: 140px;
+            border: none;
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $white;
+            font-weight: 600;
+            text-decoration: none;
+
+            &:hover {
+                background-color: $grey;
+            }
+        }
+
+        &__stats {
+            @include dflex-jcbetween();
+            padding: 0 15px;
+            margin-bottom: 20px;
+            width: 520px;
+        }
+
+        &__stat {
+            @include dflex-allcenter();
+            @include dflex-dcolumn();
+            color: $white;
+            text-align: center;
+
+            &-amount {
+                font-family: $font-dm;
+                font-size: 16px;
+                color: $white;
+                font-weight: 350;
+                margin-bottom: 3px;
+            }
+
+            &-desc {
+                font-family: $font-dm;
+                font-size: 14px;
+                color: $white;
+            }
+        }
+    }
+
+    .places {
+        width: 550px;
+        margin: 0 auto;
+        padding: 30px 0;
+
+        &__container {
+            @include dflex-dcolumn();
+            @include dflex-alcenter();
+        }
+
+        &__text {
+            @include dflex-dcolumn();
+            width: 450px;
+        }
+
+        &__title {
+            font-family: $font-dm;
+            font-size: 20px;
+            color: $black;
+            font-weight: 500;
+            width: 450px;
+            line-height: 1;
+            text-align: center;
+            align-self: center;
+            margin: 0;
+            margin-bottom: 16px;
+            letter-spacing: 0px;
+        }
+
+        &__subtitle {
+            font-family: $font-dm;
+            font-size: 16px;
+            color: $black;
+            font-weight: 400;
+            width: 350px;
+            text-align: center;
+            align-self: center;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        &__cards {
+            @include dflex-dcolumn();
+            @include dflex-alcenter();
+            width: 530px;
+            gap: 16px;
+        }
+    }
+
+    .card {
+        width: 250px;
+        border-radius: $radius-16;
+        position: relative;
+
+        &__info {
+            position: absolute;
+            bottom: 14px;
+            left: 12px;
+            color: $white;
+            z-index: 2;
+        }
+
+        &__img {
+            width: 250px;
+        }
+
+        &__city {
+            font-family: $font-dm;
+            font-size: 20px;
+            color: $white;
+            font-weight: 350;
+            margin: 0;
+            margin-bottom: 0px;
+        }
+
+        &__country {
+            font-family: $font-dm;
+            font-size: 16px;
+            font-weight: 350;
+            margin: 0;
+            margin-bottom: 3px;
+        }
+
+        &__arrow-left {
+            display: none;
+        }
+
+        &__arrow-right {
+            display: none;
+        }
+    }
+
+    .info {
+        @include dflex-alcenter();
+
+        &__content {
+            width: 550px;
+            @include dflex-dcolumn();
+            align-items: center;
+            gap: 16px;
+            margin: 20px 8px;
+        }
+
+        &__info {
+            @include dflex-dcolumn();
+            align-items: center;
+            margin: 0;
+            width: 430px;
+            gap: 14px;
+        }
+
+        &__about {
+            @include dflex-dcolumn();
+            align-items: center;
+            width: 430px;
+            gap: 10px;
+        }
+
+        &__title {
+            font-family: $font-dm;
+            font-size: 20px;
+            color: $black;
+            font-weight: 500;
+            line-height: 1;
+            margin: 0;
+            letter-spacing: 0;
+            margin-top: 0px;
+            margin-left: 0px;
+        }
+
+        &__subtitle {
+            text-align: center;
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $muted;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        &__benefits {
+            width: 400px;
+            @include dflex-dcolumn();
+            gap: 10px;
+        }
+
+        &__benefit {
+            @include dflex-jcbetween-alcenter();
+            width: 400px;
+
+            &-text {
+                width: 360px;
+                @include dflex-dcolumn();
+                gap: 4px;
+                margin-top: 0px;
+            }
+
+            &-title {
+                font-family: $font-dm;
+                font-size: 20px;
+                color: $black;
+                font-weight: 500;
+                margin: 0;
+            }
+
+            &-subtitle {
+                font-family: $font-dm;
+                font-size: 14px;
+                color: $muted;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+
+        &__button-link {
+            width: 160px;
+            border-radius: $radius-40;
+            padding: 10px 0px;
+            background-color: $black;
+            color: $white;
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $white;
+            font-weight: 500;
+            border: none;
+            letter-spacing: 0px;
+
+            &:hover {
+                background-color: $grey;
+            }
+        }
+
+        &__img {
+            width: 400px;
+            margin-bottom: 8px;
+        }
+    }
+
+    .hotels {
+        @include dflex-dcolumn();
+        @include dflex-alcenter();
+        gap: 10px;
+
+        &__info {
+            margin-top: 20px;
+            width: 400px;
+            @include dflex-dcolumn();
+            gap: 10px;
+        }
+
+        &__title {
+            font-family: $font-dm;
+            font-size: 20px;
+            color: $black;
+            font-weight: 500;
+            line-height: 1;
+            margin: 0;
+            margin-left: 0px;
+            letter-spacing: 0;
+        }
+
+        &__subtitle {
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $muted;
+            font-weight: 400;
+            margin: 0;
+            text-align: center;
+        }
+
+        &__cards {
+            @include dflex-dcolumn();
+            align-items: center;
+            width: 500px;
+            gap: 16px;
+        }
+
+        &__first-card {
+            width: 400px;
+            @include dflex-jccenter();
+            background-image: url('/img/отель\ 1.png');
+            background-size: 400px;
+        }
+
+        &__second-card {
+            width: 400px;
+            @include dflex-jccenter();
+            background-image: url('/img/отель\ 2.png');
+            background-size: 400px;
+        }
+
+        &__third-card {
+            width: 400px;
+            @include dflex-jccenter();
+            background-image: url('/img/отель\ 3.png');
+            background-size: 400px;
+        }
+
+        &__card-info {
+            margin-top: 270px;
+            width: 350px;
+            padding: 10px;
+            border-radius: $radius-16;
+            background-color: $white;
+            @include dflex-dcolumn();
+            gap: 10px;
+            margin-bottom: 6px;
+        }
+
+        &__card-text {
+            @include dflex-dcolumn();
+            gap: 4px;
+        }
+
+        &__card-title {
+            font-family: $font-dm;
+            font-size: 16px;
+            color: $black;
+            font-weight: 400;
+            color: $black;
+            margin: 0;
+        }
+
+        &__card-subtitle {
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $muted;
+            margin: 0;
+        }
+
+        &__card-options {
+            @include dflex-jcbetween();
+        }
+
+        &__card-price {
+            width: 70px;
+        }
+
+        &__card-dollars {
+            font-family: $font-dm;
+            font-size: 18px;
+            color: $black;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        &__card-night {
+            font-family: $font-dm;
+            font-size: 16px;
+            color: $muted;
+            font-weight: 400;
+        }
+
+        &__card-rating {
+            width: 54px;
+            @include dflex-allcenter();
+            background-color: $accent;
+            border-radius: $radius-48;
+        }
+
+        &__card-stars {
+            margin: 0;
+        }
+
+        &__button-link {
+            width: 142px;
+            padding: 12px 0px;
+            border-radius: $radius-40;
+            background-color: $black;
+            font-family: $font-dm;
+            color: $white;
+            font-weight: 600;
+            border: none;
+            margin-bottom: 40px;
+            font-size: 14px;
+
+            &:hover {
+                background-color: $grey;
+            }
+        }
+    }
+
+    .review {
+        @include dflex-dcolumn();
+        @include dflex-alcenter();
+        gap: 16px;
+        overflow: hidden;
+
+        &__title {
+            width: 400px;
+            font-family: $font-dm;
+            font-size: 18px;
+            color: $black;
+            font-weight: 500;
+            text-align: center;
+            line-height: 1;
+            margin: 0;
+            margin-top: 30px;
+            letter-spacing: 0px;
+        }
+
+        &__cards {
+            @include dflex-jcbetween();
+            margin-bottom: 20px;
+            width: 650px;
+        }
+
+        &__card {
+            @include dflex-dcolumn();
+            width: 190px;
+            gap: 5px;
+            border: 1px #E5E5E5 solid;
+            border-radius: $radius-16;
+            padding: 10px 10px;
+        }
+
+        &__quote {
+            font-family: $font-dm;
+            font-size: 16px;
+            color: $black;
+            font-weight: 400;
+            text-align: start;
+            margin: 0px 0 0 0;
+            line-height: 1.2;
+            letter-spacing: 0.1px;
+        }
+
+        &__author {
+            @include dflex-dcolumn();
+            margin: 0;
+            align-items: start;
+            gap: 6px;
+
+            &-info {
+                @include dflex-dcolumn();
+                gap: 4px;
+                align-items: start;
+            }
+
+            &-name {
+                font-family: $font-dm;
+                font-size: 14px;
+                color: $black;
+                font-weight: 400;
+                margin: 0;
+            }
+
+            &-work {
+                font-family: $font-dm;
+                font-size: 12px;
+                color: $muted;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+    }
+
+    .ready {
+        @include dflex-jccenter();
+
+        &__block {
+            background-color: #F5F5F5;
+            border-radius: 16px;
+            width: 500px;
+            padding: 20px;
+            border: none;
+            @include dflex-jcbetween();
+            align-items: start;
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            @include dflex-dcolumn();
+            gap: 10px;
+            width: 260px;
+        }
+
+        &__title {
+            font-family: $font-dm;
+            font-size: 18px;
+            color: $black;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        &__info {
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $muted;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        &__buttons {
+            width: 280px;
+            @include dflex-jcbetween();
+        }
+
+        &__first-button {
+            padding: 8px 8px;
+            border: 1px #4F4F53 solid;
+            border-radius: $radius-40;
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $muted;
+            font-weight: 500;
+            color: $muted;
+
+            &:hover {
+                background-color: $grey;
+            }
+        }
+
+        &__second-button {
+            padding: 8px 0px;
+            width: 160px;
+            border: none;
+            border-radius: $radius-40;
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $white;
+            font-weight: 500;
+            background-color: $black;
+
+            &:hover {
+                background-color: $grey;
+            }
+        }
+    }
+
+    .footer {
+        display: flex;
+        margin-top: 0px;
+
+        &__block {
+            background-color: $black;
+            @include dflex-dcolumn();
+            gap: 10px;
+            padding: 16px 10px 10px 10px;
+            border-radius: $radius-16;
+            width: 530px;
+        }
+
+        &__menu {
+            @include dflex-jcbetween();
+            width: 530px;
+            align-items: start;
+        }
+
+        &__info {
+            width: 270px;
+            @include dflex-dcolumn();
+            align-items: start;
+            gap: 10px;
+        }
+
+        &__company {
+            @include dflex-dcolumn();
+            align-items: start;
+            gap: 8px;
+
+            &-text {
+                font-family: $font-dm;
+                font-size: 14px;
+                color: $white;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+
+        &__nav-list {
+            display: none;
+        }
+
+        &__nav-item {
+            display: none;
+        }
+
+        &__nav-link {
+            color: $white;
+            text-decoration: none;
+
+            &:hover {
+                color: $grey;
+            }
+        }
+
+        &__img {
+            width: 100px;
+        }
+
+        &__register {
+            width: 220px;
+            @include dflex-dcolumn();
+            gap: 8px;
+            align-items: start;
+
+            &-text {
+                margin: 0;
+                font-family: $font-dm;
+                font-size: 16px;
+                font-weight: 600;
+                color: $white;
+            }
+        }
+
+        &__buttons {
+            @include dflex-dcolumn();
+            gap: 8px;
+            width: 220px;
+        }
+
+        &__first-button {
+            width: 150px;
+            text-align: start;
+            border-radius: 50px;
+            padding: 6px 10px;
+            border: 1px #ffffff solid;
+            @include txt-16-white();
+            font-weight: 400;
+            background-color: $black;
+        }
+
+        &__second-button {
+            width: 150px;
+            border-radius: 50px;
+            padding: 6px 0px;
+            border: none;
+            @include txt-16();
+            font-weight: 600;
+            color: $black;
+            background-color: $white;
+
+            &:hover {
+                background-color: $grey;
+            }
+        }
+
+        &__brand {
+            width: 530px;
+            padding-top: 22px;
+            @include dflex-jcbetween();
+            border-top: 1px #4F4F53 solid;
+        }
+
+        &__rights {
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $white;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        &__aspects {
+            width: 191px;
+            @include dflex-alcenter();
+            gap: 10px;
+            list-style: none;
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $white;
+            font-weight: 400;
+            margin: 0;
+            letter-spacing: 0px;
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+    .container {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .hero {
+        margin-top: 4px;
+        width: 300px;
+        border-radius: $radius-16;
+        background-image:
+            linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
+            url('/img/1.png');
+        @include dflex-dcolumn-ccenter();
+        padding: 4px 0 0 0;
+
+        &__nav {
+            @include dflex-jcbetween-alcenter();
+            align-self: center;
+            width: 290px;
+            margin-bottom: 20px;
+            padding: 2px 5px;
+        }
+
+        &__brand {
+            @include dflex-jcbetween-alcenter();
+            width: 24px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            margin-right: 0px;
+        }
+
+        &__logo {
+            display: none;
+        }
+
+        &__burger {
+            display: flex;
+
+            &-img {
+                width: 24px;
+            }
+        }
+
+        &__nav-list {
+            display: none;
+        }
+
+        &__nav-item {
+            display: none;
+        }
+
+        &__nav-link {
+            color: $white;
+            text-decoration: none;
+
+            &:hover {
+                color: $black;
+            }
+        }
+
+        &__auth {
+            display: none;
+        }
+
+        &__login {
+            display: none;
+        }
+
+        &__register {
+            display: none;
+        }
+
+        &__center {
+            @include dflex-dcolumn();
+            align-self: center;
+            width: 230px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        &__title {
+            font-family: $font-dm;
+            font-size: 16px;
+            color: $white;
+            align-self: center;
+            max-width: 230px;
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+
+        &__subtitle {
+            font-family: $font-dm;
+            font-size: 10px;
+            color: $white;
+            width: 230px;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        &__button-link {
+            @include dflex-allcenter();
+            align-self: center;
+            background-color: $black;
+            padding: 4px 4px;
+            border-radius: $radius-40;
+            width: 100px;
+            border: none;
+            font-family: $font-dm;
+            font-size: 10px;
+            color: $white;
+            font-weight: 600;
+            text-decoration: none;
+
+            &:hover {
+                background-color: $grey;
+            }
+        }
+
+        &__stats {
+            @include dflex-jcbetween();
+            padding: 0 5px;
+            margin-bottom: 10px;
+            width: 290px;
+        }
+
+        &__stat {
+            @include dflex-allcenter();
+            @include dflex-dcolumn();
+            color: $white;
+            text-align: center;
+
+            &-amount {
+                font-family: $font-dm;
+                font-size: 14px;
+                color: $white;
+                font-weight: 350;
+                margin-bottom: 2px;
+            }
+
+            &-desc {
+                font-family: $font-dm;
+                font-size: 8px;
+                color: $white;
+            }
+        }
+    }
+
+    .places {
+        width: 300px;
+        margin: 0 auto;
+        padding: 10px 0;
+
+        &__container {
+            @include dflex-dcolumn();
+            @include dflex-alcenter();
+        }
+
+        &__text {
+            @include dflex-dcolumn();
+            width: 260px;
+        }
+
+        &__title {
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $black;
+            font-weight: 500;
+            width: 260px;
+            line-height: 1;
+            text-align: center;
+            align-self: center;
+            margin: 0;
+            margin-bottom: 4px;
+            letter-spacing: 0px;
+        }
+
+        &__subtitle {
+            font-family: $font-dm;
+            font-size: 10px;
+            color: $black;
+            font-weight: 400;
+            width: 260px;
+            text-align: center;
+            align-self: center;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+
+        &__cards {
+            @include dflex-dcolumn();
+            @include dflex-alcenter();
+            width: 300px;
+            gap: 10px;
+        }
+    }
+
+    .card {
+        width: 230px;
+        border-radius: $radius-16;
+        position: relative;
+
+        &__info {
+            position: absolute;
+            bottom: 8px;
+            left: 6px;
+            color: $white;
+            z-index: 2;
+        }
+
+        &__img {
+            width: 230px;
+        }
+
+        &__city {
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $white;
+            font-weight: 350;
+            margin: 0;
+            margin-bottom: 0px;
+        }
+
+        &__country {
+            font-family: $font-dm;
+            font-size: 10px;
+            font-weight: 350;
+            margin: 0;
+            margin-bottom: 3px;
+        }
+
+        &__arrow-left {
+            display: none;
+        }
+
+        &__arrow-right {
+            display: none;
+        }
+    }
+
+    .info {
+        @include dflex-alcenter();
+
+        &__content {
+            width: 300px;
+            @include dflex-dcolumn();
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0px;
+        }
+
+        &__info {
+            @include dflex-dcolumn();
+            align-items: center;
+            margin: 0;
+            width: 300px;
+            gap: 10px;
+        }
+
+        &__about {
+            @include dflex-dcolumn();
+            align-items: center;
+            width: 300px;
+            gap: 10px;
+        }
+
+        &__title {
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $black;
+            font-weight: 500;
+            line-height: 1;
+            margin: 0;
+            letter-spacing: 0;
+            margin-top: 0px;
+            margin-left: 0px;
+        }
+
+        &__subtitle {
+            text-align: center;
+            font-family: $font-dm;
+            font-size: 10px;
+            color: $muted;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        &__benefits {
+            width: 300px;
+            @include dflex-dcolumn();
+            gap: 6px;
+        }
+
+        &__benefit {
+            @include dflex-jcbetween-alcenter();
+            width: 300px;
+
+            &-text {
+                width: 260px;
+                @include dflex-dcolumn();
+                gap: 4px;
+                margin-top: 0px;
+            }
+
+            &-title {
+                font-family: $font-dm;
+                font-size: 14px;
+                color: $black;
+                font-weight: 500;
+                margin: 0;
+            }
+
+            &-subtitle {
+                font-family: $font-dm;
+                font-size: 10px;
+                color: $muted;
+                font-weight: 400;
+                margin: 0;
+            }
+
+            &-img {
+                width: 36px;
+            }
+        }
+
+        &__button-link {
+            width: 100px;
+            border-radius: $radius-40;
+            padding: 8px 0px;
+            background-color: $black;
+            color: $white;
+            font-family: $font-dm;
+            font-size: 10px;
+            color: $white;
+            font-weight: 400;
+            border: none;
+            letter-spacing: 0px;
+
+            &:hover {
+                background-color: $grey;
+            }
+        }
+
+        &__img {
+            width: 280px;
+            margin-bottom: 8px;
+        }
+    }
+
+    .hotels {
+        @include dflex-dcolumn();
+        @include dflex-alcenter();
+        gap: 8px;
+
+        &__info {
+            margin-top: 10px;
+            width: 300px;
+            @include dflex-dcolumn();
+            gap: 8px;
+        }
+
+        &__title {
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $black;
+            font-weight: 500;
+            line-height: 1;
+            margin: 0;
+            margin-left: 0px;
+            letter-spacing: 0;
+        }
+
+        &__subtitle {
+            font-family: $font-dm;
+            font-size: 10px;
+            color: $muted;
+            font-weight: 400;
+            margin: 0;
+            text-align: center;
+        }
+
+        &__cards {
+            @include dflex-dcolumn();
+            align-items: center;
+            width: 300px;
+            gap: 8px;
+        }
+
+        &__first-card {
+            width: 280px;
+            @include dflex-jccenter();
+            background-image: url('/img/отель\ 1.png');
+            background-size: 280px;
+        }
+
+        &__second-card {
+            width: 280px;
+            @include dflex-jccenter();
+            background-image: url('/img/отель\ 2.png');
+            background-size: 280px;
+        }
+
+        &__third-card {
+            width: 280px;
+            @include dflex-jccenter();
+            background-image: url('/img/отель\ 3.png');
+            background-size: 280px;
+        }
+
+        &__card-info {
+            margin-top: 186px;
+            width: 220px;
+            padding: 5px;
+            border-radius: $radius-16;
+            background-color: $white;
+            @include dflex-dcolumn();
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        &__card-text {
+            @include dflex-dcolumn();
+            gap: 4px;
+        }
+
+        &__card-title {
+            font-family: $font-dm;
+            font-size: 12px;
+            color: $black;
+            font-weight: 400;
+            color: $black;
+            margin: 0;
+        }
+
+        &__card-subtitle {
+            font-family: $font-dm;
+            font-size: 10px;
+            color: $muted;
+            margin: 0;
+        }
+
+        &__card-options {
+            @include dflex-jcbetween();
+        }
+
+        &__card-price {
+            width: 40px;
+        }
+
+        &__card-dollars {
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $black;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        &__card-night {
+            font-family: $font-dm;
+            font-size: 10px;
+            color: $muted;
+            font-weight: 400;
+        }
+
+        &__card-rating {
+            width: 60px;
+            @include dflex-allcenter();
+            background-color: $accent;
+            border-radius: $radius-48;
+        }
+
+        &__card-stars {
+            margin: 0;
+        }
+
+        &__button-link {
+            width: 130px;
+            padding: 8px 0px;
+            border-radius: $radius-40;
+            background-color: $black;
+            font-family: $font-dm;
+            font-size: 10px;
+            color: $white;
+            font-weight: 600;
+            border: none;
+            margin-bottom: 20px;
+
+            &:hover {
+                background-color: $grey;
+            }
+        }
+    }
+
+    .review {
+        @include dflex-dcolumn();
+        @include dflex-alcenter();
+        gap: 8px;
+        overflow: hidden;
+
+        &__title {
+            width: 230px;
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $black;
+            font-weight: 500;
+            text-align: center;
+            line-height: 1;
+            margin: 0;
+            margin-top: 18px;
+            letter-spacing: 0px;
+        }
+
+        &__cards {
+            @include dflex-jcbetween();
+            margin-bottom: 10px;
+            width: 400px;
+        }
+
+        &__card {
+            @include dflex-dcolumn();
+            width: 120px;
+            gap: 5px;
+            border: 1px #E5E5E5 solid;
+            border-radius: $radius-16;
+            padding: 5px 5px;
+        }
+
+        &__quote {
+            font-family: $font-dm;
+            font-size: 12px;
+            color: $black;
+            font-weight: 400;
+            text-align: start;
+            margin: 0px 0 0 0;
+            line-height: 1.2;
+            letter-spacing: 0px;
+        }
+
+        &__author {
+            @include dflex-dcolumn();
+            margin: 0;
+            align-items: start;
+            gap: 4px;
+
+            &-info {
+                @include dflex-dcolumn();
+                gap: 4px;
+                align-items: start;
+            }
+
+            &-name {
+                font-family: $font-dm;
+                font-size: 10px;
+                color: $black;
+                font-weight: 400;
+                margin: 0;
+            }
+
+            &-work {
+                font-family: $font-dm;
+                font-size: 8px;
+                color: $muted;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+    }
+
+    .ready {
+        @include dflex-jccenter();
+
+        &__block {
+            background-color: #F5F5F5;
+            border-radius: 16px;
+            width: 280px;
+            padding: 5px;
+            border: none;
+            @include dflex-jcbetween();
+            align-items: start;
+            margin-bottom: 10px;
+        }
+
+        &__text {
+            @include dflex-dcolumn();
+            gap: 6px;
+            width: 160px;
+        }
+
+        &__title {
+            font-family: $font-dm;
+            font-size: 14px;
+            color: $black;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        &__info {
+            font-family: $font-dm;
+            font-size: 10px;
+            color: $muted;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        &__buttons {
+            margin-top: 10px;
+            width: 120px;
+            @include dflex-dcolumn();
+            align-items: center;
+            gap: 10px;
+        }
+
+        &__first-button {
+            padding: 4px 4px;
+            border: 1px #4F4F53 solid;
+            border-radius: $radius-40;
+            font-family: $font-dm;
+            font-size: 10px;
+            color: $muted;
+            font-weight: 500;
+            color: $muted;
+
+            &:hover {
+                background-color: $grey;
+            }
+        }
+
+        &__second-button {
+            padding: 4px 4px;
+            width: 110px;
+            border: none;
+            border-radius: $radius-40;
+            font-family: $font-dm;
+            font-size: 10px;
+            color: $white;
+            font-weight: 500;
+            background-color: $black;
+
+            &:hover {
+                background-color: $grey;
+            }
+        }
+    }
+
+    .footer {
+        display: flex;
+        margin-top: 0px;
+
+        &__block {
+            background-color: $black;
+            @include dflex-dcolumn();
+            gap: 8px;
+            padding: 8px 4px 4px 6px;
+            border-radius: $radius-16;
+            width: 292px;
+        }
+
+        &__menu {
+            @include dflex-jcbetween();
+            width: 286px;
+            align-items: start;
+        }
+
+        &__info {
+            width: 140px;
+            @include dflex-dcolumn();
+            align-items: start;
+            gap: 6px;
+        }
+
+        &__company {
+            @include dflex-dcolumn();
+            align-items: start;
+            gap: 4px;
+
+            &-text {
+                font-family: $font-dm;
+                font-size: 8px;
+                color: $white;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+
+        &__nav-list {
+            display: none;
+        }
+
+        &__nav-item {
+            display: none;
+        }
+
+        &__nav-link {
+            color: $white;
+            text-decoration: none;
+
+            &:hover {
+                color: $grey;
+            }
+        }
+
+        &__img {
+            width: 50px;
+        }
+
+        &__register {
+            width: 140px;
+            @include dflex-dcolumn();
+            gap: 4px;
+            align-items: start;
+
+            &-text {
+                margin: 0;
+                font-family: $font-dm;
+                font-size: 12px;
+                font-weight: 600;
+                color: $white;
+            }
+        }
+
+        &__buttons {
+            @include dflex-dcolumn();
+            gap: 4px;
+            width: 180px;
+        }
+
+        &__first-button {
+            width: 90px;
+            text-align: start;
+            border-radius: 50px;
+            padding: 4px 6px;
+            border: 1px #ffffff solid;
+            font-family: $font-dm;
+            font-size: 8px;
+            color: $white;
+            font-weight: 400;
+            background-color: $black;
+        }
+
+        &__second-button {
+            width: 90px;
+            border-radius: 50px;
+            padding: 4px 0px;
+            border: none;
+            font-family: $font-dm;
+            font-size: 8px;
+            color: $black;
+            font-weight: 500;
+            color: $black;
+            background-color: $white;
+
+            &:hover {
+                background-color: $grey;
+            }
+        }
+
+        &__brand {
+            width: 280px;
+            padding-top: 10px;
+            @include dflex-jcbetween();
+            border-top: 1px #4F4F53 solid;
+        }
+
+        &__rights {
+            font-family: $font-dm;
+            font-size: 8px;
+            color: $white;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        &__aspects {
+            width: 100px;
+            padding-left: 0px;
+            @include dflex-alcenter();
+            gap: 6px;
+            list-style: none;
+            font-family: $font-dm;
+            font-size: 8px;
+            color: $white;
+            font-weight: 400;
+            margin: 0;
+            letter-spacing: 0px;
+        }
+    }
+}

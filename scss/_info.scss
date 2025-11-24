@@ -1,0 +1,90 @@
+@import '_mixin.scss';
+@import '_peremen.scss';
+
+.info {
+    @include dflex-alcenter();
+
+    &__content {
+        width: 1338px;
+        @include dflex-jcbetween-alcenter();
+        margin: 80px 31px;
+    }
+
+    &__info {
+        @include dflex-dcolumn();
+        justify-content: start;
+        margin: 0;
+        width: 589px;
+        gap: 48px;
+    }
+
+    &__about {
+        @include dflex-dcolumn();
+        width: 589px;
+        gap: 16px;
+    }
+
+    &__title {
+        @include txt-40-black();
+        line-height: 120%;
+        margin: 0;
+        letter-spacing: 1.9px;
+        margin-top: -4px;
+        margin-left: 1px;
+    }
+
+    &__subtitle {
+        @include txt-16-muted();
+        margin: 0;
+    }
+
+    &__benefits {
+        width: 397px;
+        @include dflex-dcolumn();
+        gap: 24px;
+    }
+
+    &__benefit {
+        @include dflex-jcbetween-alcenter();
+        width: 397px;
+
+        &-text {
+            width: 309px;
+            @include dflex-dcolumn();
+            gap: 8px;
+            margin-top: 1px;
+        }
+
+        &-title {
+            @include txt-24-black();
+            margin: 0;
+        }
+
+        &-subtitle {
+            @include txt-16-muted();
+            margin: 0;
+        }
+    }
+
+    &__button-link {
+        @include dflex-allcenter();
+        width: 157px;
+        border-radius: $radius-40;
+        padding: 12px 0px;
+        background-color: $black;
+        border: none;
+        @include txt-16-white();
+        color: $white;
+        font-weight: 500;
+        letter-spacing: 0.2px;
+        text-decoration: none;
+
+        &:hover {
+            background-color: $grey;
+        }
+    }
+
+    &__img {
+        margin-bottom: 8px;
+    }
+}

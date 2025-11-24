@@ -1,0 +1,67 @@
+@import '_mixin.scss';
+@import '_peremen.scss';
+
+.ready {
+    @include dflex-jccenter();
+
+    &__block {
+        background-color: #F5F5F5;
+        border-radius: 16px;
+        width: 1088px;
+        padding: 64px;
+        border: none;
+        @include dflex-jcbetween();
+        align-items: start;
+        margin-bottom: 80px;
+    }
+
+    &__text {
+        @include dflex-dcolumn();
+        gap: 16px;
+        width: 548px;
+    }
+
+    &__title {
+        @include txt-28-black();
+        margin: 0;
+    }
+
+    &__info {
+        @include txt-18-muted();
+        margin: 0;
+    }
+
+    &__buttons {
+        width: 342px;
+        @include dflex-jcbetween();
+    }
+
+    &__first-button {
+        @include dflex-allcenter();
+        padding: 11px 20px;
+        border: 1px #4F4F53 solid;
+        border-radius: $radius-40;
+        @include txt-16-muted-600();
+        color: $muted;
+        text-decoration: none;
+
+        &:hover {
+            background-color: $grey;
+        }
+    }
+
+    &__second-button {
+        @include dflex-allcenter();
+        padding: 12px 0px;
+        width: 202px;
+        border: none;
+        border-radius: $radius-40;
+        @include txt-16-white-600();
+        background-color: $black;
+        text-decoration: none;
+
+        &:hover {
+            background-color: $grey;
+        }
+    }
+}

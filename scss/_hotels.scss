@@ -1,0 +1,125 @@
+@import '_mixin.scss';
+@import '_peremen.scss';
+
+.hotels {
+    @include dflex-dcolumn();
+    @include dflex-alcenter();
+    gap: 40px;
+
+    &__info {
+        margin-top: 80px;
+        width: 720px;
+        @include dflex-dcolumn();
+        gap: 16px;
+    }
+
+    &__title {
+        @include txt-40-black();
+        line-height: 1.20;
+        margin: 0;
+        margin-left: 3px;
+        letter-spacing: 1.8px;
+    }
+
+    &__subtitle {
+        @include txt-16-muted();
+        margin: 0;
+        text-align: center;
+    }
+
+    &__cards {
+        @include dflex-jcbetween();
+        width: 1338px;
+    }
+
+    &__first-card {
+        width: 430px;
+        @include dflex-jccenter();
+        background-image: url(../img/отель\ 1.png);
+    }
+
+    &__second-card {
+        width: 430px;
+        @include dflex-jccenter();
+        background-image: url(../img/отель\ 2.png);
+    }
+
+    &__third-card {
+        width: 430px;
+        @include dflex-jccenter();
+        background-image: url(../img/отель\ 3.png);
+    }
+
+    &__card-info {
+        margin-top: 273px;
+        width: 382px;
+        padding: 16px;
+        border-radius: $radius-16;
+        background-color: $white;
+        @include dflex-dcolumn();
+        gap: 16px;
+        margin-bottom: 8px;
+    }
+
+    &__card-text {
+        @include dflex-dcolumn();
+        gap: 4px;
+    }
+
+    &__card-title {
+        @include txt-18-black();
+        color: $black;
+        margin: 0;
+    }
+
+    &__card-subtitle {
+        @include txt-14();
+        color: $muted;
+        margin: 0;
+    }
+
+    &__card-options {
+        @include dflex-jcbetween();
+    }
+
+    &__card-price {
+        width: 96px;
+    }
+
+    &__card-dollars {
+        @include txt-20-black();
+        margin: 0;
+    }
+
+    &__card-night {
+        @include txt-16-muted();
+    }
+
+    &__card-rating {
+        width: 54px;
+        @include dflex-allcenter();
+        background-color: $accent;
+        border-radius: $radius-48;
+    }
+
+    &__card-stars {
+        margin: 0;
+    }
+
+    &__button-link {
+        @include dflex-allcenter();
+        width: 142px;
+        padding: 12px 0px;
+        border-radius: $radius-40;
+        background-color: $black;
+        @include txt-16-white-600();
+        border: none;
+        margin-bottom: 80px;
+        @include txt-16-white-600();
+        text-decoration: none;
+
+        &:hover {
+            background-color: $grey;
+        }
+    }
+}
