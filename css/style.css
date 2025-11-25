@@ -390,19 +390,19 @@
   width: 430px;
   display: flex;
   justify-content: center;
-  background-image: url(../img/отель\ 1.png);
+  background-image: url(../img/отель\ 1.webp);
 }
 .hotels__second-card {
   width: 430px;
   display: flex;
   justify-content: center;
-  background-image: url(../img/отель\ 2.png);
+  background-image: url(../img/отель\ 2.webp);
 }
 .hotels__third-card {
   width: 430px;
   display: flex;
   justify-content: center;
-  background-image: url(../img/отель\ 3.png);
+  background-image: url(../img/отель\ 3.webp);
 }
 .hotels__card-info {
   margin-top: 273px;
