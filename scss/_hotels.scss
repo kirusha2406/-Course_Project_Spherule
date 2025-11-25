@@ -35,19 +35,19 @@
     &__first-card {
         width: 430px;
         @include dflex-jccenter();
-        background-image: url(../img/отель\ 1.webp);
+        background-image: url(../img/отель1.webp);
     }
 
     &__second-card {
         width: 430px;
         @include dflex-jccenter();
-        background-image: url(../img/отель\ 2.webp);
+        background-image: url(../img/отель2.webp);
     }
 
     &__third-card {
         width: 430px;
         @include dflex-jccenter();
-        background-image: url(../img/отель\ 3.webp);
+        background-image: url(../img/отель3.webp);
     }
 
     &__card-info {

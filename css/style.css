@@ -390,19 +390,19 @@
   width: 430px;
   display: flex;
   justify-content: center;
-  background-image: url(../img/отель\ 1.webp);
+  background-image: url(../img/отель1.webp);
 }
 .hotels__second-card {
   width: 430px;
   display: flex;
   justify-content: center;
-  background-image: url(../img/отель\ 2.webp);
+  background-image: url(../img/отель2.webp);
 }
 .hotels__third-card {
   width: 430px;
   display: flex;
   justify-content: center;
-  background-image: url(../img/отель\ 3.webp);
+  background-image: url(../img/отель3.webp);
 }
 .hotels__card-info {
   margin-top: 273px;
@@ -861,21 +861,21 @@ body {
     width: 350px;
     display: flex;
     justify-content: center;
-    background-image: url("/img/отель 1.png");
+    background-image: url(../img/отель1.webp);
     background-size: 350px;
   }
   .hotels__second-card {
     width: 350px;
     display: flex;
     justify-content: center;
-    background-image: url("/img/отель 2.png");
+    background-image: url(../img/отель2.webp);
     background-size: 350px;
   }
   .hotels__third-card {
     width: 350px;
     display: flex;
     justify-content: center;
-    background-image: url("/img/отель 3.png");
+    background-image: url(../img/отель3.webp);
     background-size: 350px;
   }
   .hotels__card-info {
@@ -1068,21 +1068,21 @@ body {
     width: 300px;
     display: flex;
     justify-content: center;
-    background-image: url("/img/отель 1.png");
+    background-image: url(..//img/отель1.webp);
     background-size: 300px;
   }
   .hotels__second-card {
     width: 300px;
     display: flex;
     justify-content: center;
-    background-image: url("/img/отель 2.png");
+    background-image: url(../img/отель2.webp);
     background-size: 300px;
   }
   .hotels__third-card {
     width: 300px;
     display: flex;
     justify-content: center;
-    background-image: url("/img/отель 3.png");
+    background-image: url(../img/отель3.webp);
     background-size: 300px;
   }
   .hotels__card-info {
@@ -1219,7 +1219,7 @@ body {
     margin-top: 10px;
     width: 750px;
     border-radius: 16px;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url("/img/1.png");
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../img/1.webp);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1594,21 +1594,21 @@ body {
     width: 240px;
     display: flex;
     justify-content: center;
-    background-image: url("/img/отель 1.png");
+    background-image: url(../img/отель1.webp);
     background-size: 240px;
   }
   .hotels__second-card {
     width: 240px;
     display: flex;
     justify-content: center;
-    background-image: url("/img/отель 2.png");
+    background-image: url(../img/отель2.webp);
     background-size: 240px;
   }
   .hotels__third-card {
     width: 240px;
     display: flex;
     justify-content: center;
-    background-image: url("/img/отель 3.png");
+    background-image: url(../img/отель3.webp);
     background-size: 240px;
   }
   .hotels__card-info {
@@ -1975,7 +1975,7 @@ body {
     margin-top: 10px;
     width: 550px;
     border-radius: 16px;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url("/img/1.png");
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../img/1.webp);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -2331,21 +2331,21 @@ body {
     width: 400px;
     display: flex;
     justify-content: center;
-    background-image: url("/img/отель 1.png");
+    background-image: url(../img/отель1.webp);
     background-size: 400px;
   }
   .hotels__second-card {
     width: 400px;
     display: flex;
     justify-content: center;
-    background-image: url("/img/отель 2.png");
+    background-image: url(../img/отель2.webp);
     background-size: 400px;
   }
   .hotels__third-card {
     width: 400px;
     display: flex;
     justify-content: center;
-    background-image: url("/img/отель 3.png");
+    background-image: url(../img/отель3.webp);
     background-size: 400px;
   }
   .hotels__card-info {
@@ -2704,7 +2704,7 @@ body {
     margin-top: 4px;
     width: 300px;
     border-radius: 16px;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url("/img/1.png");
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../img/1.webp);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -3060,21 +3060,21 @@ body {
     width: 280px;
     display: flex;
     justify-content: center;
-    background-image: url("/img/отель 1.png");
+    background-image: url(../img/отель1.webp);
     background-size: 280px;
   }
   .hotels__second-card {
     width: 280px;
     display: flex;
     justify-content: center;
-    background-image: url("/img/отель 2.png");
+    background-image: url(../img/отель2.webp);
     background-size: 280px;
   }
   .hotels__third-card {
     width: 280px;
     display: flex;
     justify-content: center;
-    background-image: url("/img/отель 3.png");
+    background-image: url(../img/отель3.webp);
     background-size: 280px;
   }
   .hotels__card-info {
